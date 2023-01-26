@@ -98,7 +98,7 @@ const CarsList = () => {
                         <div className="details">{car.detail}</div>
                         <br />
                         <div className="features">
-                          <h2 className="text-secondary my-4 underline italic">
+                          <h2 className="text-secondary font-bold underline italic">
                             Features
                           </h2>
                           <ul>
@@ -108,17 +108,15 @@ const CarsList = () => {
                           </ul>
                         </div>
                         <br />
-                        <h2 className="text-secondary my-4 font-bold italic">
+                        <h2 className="text-secondary font-bold underline italic">
                           Included in the price
                         </h2>
-                        <div className="includedPrice">
-                          <u>
+                        <div className="includedPrice ">
                             {car.includedInThePrice.map((included) => (
                               <li key={included} className="no-underline">
                                 {included}
                               </li>
                             ))}
-                          </u>
                         </div>
                         <br />
                       </div>
