@@ -36,7 +36,10 @@ const CarsList = () => {
         : cars.length > 0 &&
           cars.map((car) => {
             return (
-              <div key={car.id} className="flex flex-col md:flex-row justify-between items-center">
+              <div
+                key={car.id}
+                className="flex flex-col md:flex-row justify-between items-center"
+              >
                 <div>
                   <button
                     className="rounded-lg bg-green-700 text-md mx-5 mt-12 px-12"
@@ -68,6 +71,7 @@ const CarsList = () => {
                             <u> {car.carName}</u>
                           </h2>
                         </div>
+                        <br />
                         <div className="slider">
                           <div className="h-fit w-screen md:w-fit">
                             <Carousel
@@ -87,7 +91,7 @@ const CarsList = () => {
                                   key={image}
                                   src={image}
                                   alt={car.carName + index}
-                                  className="object-cover h-80 w-full"
+                                  className="object-cover h-80 w-full rounded-3xl"
                                   width={1000}
                                   height={1000}
                                 />
@@ -95,6 +99,7 @@ const CarsList = () => {
                             </Carousel>
                           </div>
                         </div>
+                        <br />
                         <div className="details">{car.detail}</div>
                         <br />
                         <div className="features">
@@ -112,11 +117,11 @@ const CarsList = () => {
                           Included in the price
                         </h2>
                         <div className="includedPrice ">
-                            {car.includedInThePrice.map((included) => (
-                              <li key={included} className="no-underline">
-                                {included}
-                              </li>
-                            ))}
+                          {car.includedInThePrice.map((included) => (
+                            <li key={included} className="no-underline">
+                              {included}
+                            </li>
+                          ))}
                         </div>
                         <br />
                       </div>
