@@ -36,7 +36,7 @@ const CarsList = () => {
         : cars.length > 0 &&
           cars.map((car) => {
             return (
-              <div key={car.id} className="flex justify-between items-center">
+              <div key={car.id} className="flex flex-col md:flex-row justify-between items-center">
                 <div>
                   <button
                     className="rounded-lg bg-green-700 text-md mx-5 mt-12 px-12"
@@ -45,7 +45,7 @@ const CarsList = () => {
                     Show car {car.id}
                   </button>
                 </div>
-                <div className="w-1/2 right-0 mr-48 top-0 mt-12 absolute">
+                <div className="md:w-1/2 right-0 md:mr-48 top-0 mt-12 md:absolute">
                   {error ? (
                     <h1 className="text-red-600 font-bold text-center">
                       {error}
@@ -69,7 +69,7 @@ const CarsList = () => {
                           </h2>
                         </div>
                         <div className="slider">
-                          <div className="w-auto sm:w-auto xs:w-auto md:w-96 h-fit">
+                          <div className="h-fit w-screen md:w-fit">
                             <Carousel
                               dragging={true}
                               wrapAround={true}
@@ -87,9 +87,9 @@ const CarsList = () => {
                                   key={image}
                                   src={image}
                                   alt={car.carName + index}
-                                  className="object-contain h-80 w-full"
-                                  width={500}
-                                  height={500}
+                                  className="object-cover h-80 w-full"
+                                  width={1000}
+                                  height={1000}
                                 />
                               ))}
                             </Carousel>
